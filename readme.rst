@@ -8,8 +8,11 @@ Acerca de
 *********
 
 Ejemplo utilizado para la implementacion de herramientas tales como:
+
 - CodeIgniter
+
 - Google Sign-In (OAuth 2.0)
+
 - Bootstrap
 
 **************************
