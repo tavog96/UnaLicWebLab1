@@ -3,7 +3,7 @@
         <h4>Bienvenido a Doge News</h4>
         <p>Aca podes probar las capacidades CRUD del framework <b>CodeIgniter</b> agregando, vizualisando y modificando noticias.</p>
         <p><a class="btn btn-primary" href="https://www.codeigniter.com/user_guide/tutorial/index.html" target="_blank" role="button">Tutorial »</a></p>
-        <p><a class="btn btn-primary" href="<?php echo base_url()?>index.php/News/save" role="button">Nueva Noticia »</a></p>
+        <p><a class="btn btn-primary" href="<?php echo base_url()?>index.php/News/save/new" role="button">Nueva Noticia »</a></p>
     </div>
 </div>
 

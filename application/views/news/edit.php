@@ -5,16 +5,19 @@
         <?php echo form_open('News/save'); ?>
 
         <label for="id" hidden>Id</label>
-        <input type="number" name="id" value="<?php if (isset($news_item)) {echo $news_item['id'];} else {echo null;} ?>" hidden/><br />
+        <input type="number" name="id" value="<?php echo $news_item['id']; ?>" hidden/><br />
 
         <label for="title">Title</label>
-        <input type="input" name="title" value="<?php if (isset($news_item)) {echo $news_item['title'];} else {echo '';} ?>" /><br />
+        <input type="input" name="title" value="<?php echo $news_item['title']; ?>" /><br />
 
         <label for="text">Text</label>
-        <textarea name="text"><?php if (isset($news_item)) {echo $news_item['text'];} else {echo '';} ?></textarea><br />
+        <textarea name="text"><?php echo $news_item['text']; ?></textarea><br />
 
         <label for="image">ImageURL *</label>
-        <input id="ImageURLinput" type="input" name="image" readonly value="<?php if (isset($news_item)) {if (isset($news_item['image'])) {echo $news_item['image'];}else{ echo " ";}} else {echo '';} ?>"/><br />
+        <a href="<?php echo $news_item['image']?>" target="_blank">
+            <img id="newsImage" src="<?php echo $news_item['image']?>" alt="news image" class="newsimg img-fluid img-thumbnail">
+        </a>
+        <input id="ImageURLinput" type="input" name="image" readonly value="<?php echo $news_item['image']; ?>" /><br />
         <p>
             * Arrastre una imagen al drag&drop
         </p>
@@ -22,6 +25,9 @@
 
         <input type="submit" name="submit" value="Guardar noticia" />
         </form>
+        <p class="error">
+            <?php echo $error?>
+        </p>
     </div>
     <div class="col-md-6">
         <div id="dropzone">

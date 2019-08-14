@@ -24,6 +24,7 @@ class News extends CI_Controller {
         $this->load->model('news_model');
         $this->load->helper('url_helper');
         $this->load->library('session');
+        $this->load->helper('url');
         if (!$this->session->has_userdata('id'))
         {
                 redirect("/");
@@ -48,28 +49,50 @@ class News extends CI_Controller {
                 show_404();
         }
 
+        $data['news_item']['id']=$this->validateField($data['news_item'], 'id');
+        $data['news_item']['title']=$this->validateField($data['news_item'], 'title');
+        $data['news_item']['text']=$this->validateField($data['news_item'], 'text');
+        $data['news_item']['image']=$this->validateField($data['news_item'], 'image');
+
         $data['title'] = $data['news_item']['title'];
         $this->load->view('templates/header', $data);
         $this->load->view('news/view', $data);
         $this->load->view('templates/footer');
     }
 
-    public function save ()
+    public function save ($new=null)
     {
         $this->load->helper('form');
         $this->load->library('form_validation');
 
         $data['title'] = 'Crear una nueva noticia';
-
+        $data['error'] = '';
         $this->form_validation->set_rules('title', 'Title', 'required');
         $this->form_validation->set_rules('text', 'Text', 'required');
 
         if ($this->form_validation->run() === FALSE)
         {
-            $this->load->view('templates/header', $data);
-            $this->load->view('news/edit');
-            $this->load->view('templates/footer');
+            $id = $this->input->post('id');
 
+            if ($id==NULL || $id=="")
+            {
+                if ($new==null)
+                {
+                    $data['error'] = APP_ERR_SAVE_FORM;
+                }
+                $data['news_item']['id']='';
+                $data['news_item']['title']='';
+                $data['news_item']['text']='';
+                $data['news_item']['image']=base_url().'img/no-image-available.png';
+                $this->load->view('templates/header', $data);
+                $this->load->view('news/edit', $data);
+                $this->load->view('templates/footer');
+            }
+            else
+            {
+                $news=$this->news_model->get_news_by_id($id);
+                redirect("/News/edit/".$news['slug']."/error");
+            }
         }
         else
         {
@@ -78,7 +101,7 @@ class News extends CI_Controller {
         }
     }
 
-    public function edit ($slug = NULL)
+    public function edit ($slug = NULL, $error = null)
     {
         $this->load->helper('form');
         $this->load->library('form_validation');
@@ -88,11 +111,43 @@ class News extends CI_Controller {
         {
                 show_404();
         }
-
+        $data['news_item']['id']=$this->validateField($data['news_item'], 'id');
+        $data['news_item']['title']=$this->validateField($data['news_item'], 'title');
+        $data['news_item']['text']=$this->validateField($data['news_item'], 'text');
+        $data['news_item']['image']=$this->validateField($data['news_item'], 'image');
+        
         $data['title'] = "Editar noticia";
+        $data['error'] = "";
+        if ($error!=null)
+        {
+            $data['error']=APP_ERR_SAVE_FORM;
+        }
         $this->load->view('templates/header', $data);
         $this->load->view('news/edit', $data);
         $this->load->view('templates/footer');
     }
 
+    private function validateField ($res, $index)
+    {
+        $emptyres='';
+        if ($index=='image')
+        {
+            $emptyres = base_url().'img/no-image-available.png';
+        }
+        if (isset($res[$index]))
+        {
+            if ($res[$index]=='')
+            {
+                return $emptyres;
+            }
+            else
+            {
+                return $res[$index];
+            }
+        }
+        else
+        {
+            return $emptyres;
+        }
+    }
 }

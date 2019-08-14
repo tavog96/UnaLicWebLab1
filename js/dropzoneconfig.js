@@ -6,6 +6,7 @@ $("#myDropzone").dropzone({
     paramName: "image",
     success: function(e, r) {
         $("#ImageURLinput").val(r.data.display_url);
+        $("#newsImage").attr("src", r.data.display_url);
     }
 });
 

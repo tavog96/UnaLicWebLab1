@@ -17,6 +17,18 @@ class News_model extends CI_Model {
             $query = $this->db->get_where('news', array('slug' => $slug));
             return $query->row_array();
         }
+
+        public function get_news_by_id($id=FALSE)
+        {
+            if ($slug === FALSE)
+            {
+                    $query = $this->db->get('news');
+                    return $query->result_array();
+            }
+
+            $query = $this->db->get_where('news', array('id' => $id));
+            return $query->row_array();
+        }
         
     public function set_news()
     {

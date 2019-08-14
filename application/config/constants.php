@@ -103,3 +103,5 @@ define('GITHUB_APP_CLIENT_ID', 'f7f733691d60605793e1'); // client ID
 define('GITHUB_APP_CLIENT_SECRET', 'bfe823ba07afa3b7cc9fae76b05a76de0e023022'); // Secret key
 define('GITHUB_APP_CLIENT_REDIRECT_URL', 'http://localhost/UnaLicWebLab1/index.php/resultgithub'); // Redirection path
 define('GITHUB_APP_OAUTH_NAME', 'UnaLicWebLab1'); // Redirection path
+define('APP_ERR_SAVE_FORM', 'Error al guardar datos, complete los campos de forma correcta'); // Redirection path
+
