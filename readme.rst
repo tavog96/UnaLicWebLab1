@@ -71,7 +71,7 @@ Recursos y documentacion de terceros
 -  `Image uploader <https://www.dropzonejs.com/>`_
 -  `Image storage <https://api.imgbb.com/>`_
 -  `Google+ User info for Login <https://developers.google.com/+/web/api/rest/>`_
--  `MySQL DB storage <https://remotemysql.com/`_
+-  `MySQL DB storage <https://remotemysql.com/>`_
 
 
 *****
