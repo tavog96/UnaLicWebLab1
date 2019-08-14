@@ -14,9 +14,11 @@
             <div class="p-4">
                 <h4 class="font-italic">Imagenes</h4>
                 <ol class="list-unstyled mb-0">
-                    <li><a href="#">FOTO 1</a></li>
-                    <li><a href="#">FOTO 2</a></li>
-                    <li><a href="#">FOTO 3</a></li>
+                    <li>
+                        <a href="<?php echo $news_item['image']?>" target="_blank">
+                            <img src="<?php echo $news_item['image']?>" alt="news image" class="img-fluid img-thumbnail">
+                        </a>
+                    </li>
                 </ol>
             </div>
             <br/>
