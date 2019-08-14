@@ -1,0 +1,40 @@
+.dropzone {
+    cursor: pointer;
+}
+
+.dropzone .dz-message {
+    font-weight: 400;
+}
+
+.dropzone .dz-message {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.dropzone,
+.dropzone * {
+    box-sizing: border-box;
+    font-family: Roboto, "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.4rem;
+    color: #646C7F;
+    text-rendering: optimizeLegibility;
+}
+
+#dropzone {
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+
+main section>* {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropzone {
+    border: 2px dashed #0087F7;
+    border-radius: 5px;
+    background: white;
+}
