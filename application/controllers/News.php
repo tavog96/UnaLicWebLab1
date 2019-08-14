@@ -60,6 +60,16 @@ class News extends CI_Controller {
         $this->load->view('templates/footer');
     }
 
+    public function delete($slug = NULL)
+    {
+        if ($slug!=NULL)
+        {
+            $this->news_model->delete_news($slug);
+            redirect("/news");
+        }
+        show_404();
+    }
+
     public function save ($new=null)
     {
         $this->load->helper('form');

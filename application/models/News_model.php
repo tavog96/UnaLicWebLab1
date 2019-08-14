@@ -61,4 +61,12 @@ class News_model extends CI_Model {
             return $this->db->replace('news', $data);
         }
     }
+
+    public function delete_news($slug = FALSE)
+    {
+        if ($slug != FALSE)
+        {
+            return $this->db->delete('news', array('slug' => $slug)); 
+        }
+    }
 }

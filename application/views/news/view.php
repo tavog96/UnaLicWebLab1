@@ -26,6 +26,7 @@
                 <h4 class="font-italic">Edicion</h4>
                 <ol class="list-unstyled mb-0">
                     <li><a href="<?php echo base_url()?>index.php/News/edit/<?php echo $news_item['slug']?>">Editar noticia</a></li>
+                    <li><a href="<?php echo base_url()?>index.php/News/delete/<?php echo $news_item['slug']?>">Eliminar noticia</a></li>
                 </ol>
             </div>
         </aside>
