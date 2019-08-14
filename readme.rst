@@ -19,8 +19,26 @@ Ejemplo utilizado para la implementacion de herramientas tales como:
 Changelog and New Features
 **************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+Implemented features:
+
+-	Google+ login.
+
+-	External SQL DB connection.
+
+-	External images server.
+
+-	Drag&Drop image uploader.
+
+-	Authentication required.
+
+-	Bootstrap design.
+
+-	Basic data CRUD implementation.
+
+Not implemented features yet:
+
+-	Github Login.
+
 
 ***************************
 Requerimientos del servidor
@@ -28,14 +46,16 @@ Requerimientos del servidor
 
 Acorde al framework CodeIgniter:
 
-PHP version 5.6 o versiones posteriores.
-Conexion estable a internet.
+- PHP version 5.6 o versiones posteriores.
+
+- Conexion estable a internet para el uso de los recursos externos.
+
 
 ***********
 Instalacion
 ***********
 
-
+El proyecto debe ser desplegado en la direccion del servidor: http://localhost/UnaLicWebLab1/
 
 ********
 Licencia
@@ -47,11 +67,12 @@ The MIT License (MIT)
 Recursos y documentacion de terceros
 ************************************
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+-  `Dev Guide <https://www.codeigniter.com/user_guide/tutorial/index.html>`_
+-  `Image uploader <https://www.dropzonejs.com/>`_
+-  `Image storage <https://api.imgbb.com/>`_
+-  `Google+ User info for Login <https://developers.google.com/+/web/api/rest/>`_
+-  `MySQL DB storage <https://remotemysql.com/`_
+
 
 *****
 Autor
