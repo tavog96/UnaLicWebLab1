@@ -15,6 +15,12 @@ Ejemplo utilizado para la implementacion de herramientas tales como:
 
 - Bootstrap
 
+*******
+Version
+*******
+
+beta 0.2
+
 **************************
 Changelog and New Features
 **************************
@@ -34,8 +40,6 @@ Implemented features:
 -	Bootstrap design.
 
 -	Basic data CRUD implementation.
-
-Not implemented features yet:
 
 -	Github Login.
 
