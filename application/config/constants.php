@@ -83,3 +83,18 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+/*
+|--------------------------------------------------------------------------
+| Google Sign-in API configuration
+|--------------------------------------------------------------------------
+|
+| Google Sign-In manages the OAuth 2.0 flow and token lifecycle, 
+| simplifying your integration with Google APIs.
+|
+| See more at https://developers.google.com/identity/sign-in/web/sign-in
+|
+*/
+define('APP_CLIENT_ID', '453023973250-itcrhcckuiu20msvqvtga1hlmj4cme6r.apps.googleusercontent.com'); // client ID
+define('APP_CLIENT_SECRET', '0xzviFHiqQiwL5tQQL2MWDH7'); // Secret key
+define('APP_CLIENT_REDIRECT_URL', 'http://localhost/UnaLicWebLab1/index.php/result'); // Redirection path
