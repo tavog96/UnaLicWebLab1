@@ -98,3 +98,8 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('APP_CLIENT_ID', '453023973250-itcrhcckuiu20msvqvtga1hlmj4cme6r.apps.googleusercontent.com'); // client ID
 define('APP_CLIENT_SECRET', '0xzviFHiqQiwL5tQQL2MWDH7'); // Secret key
 define('APP_CLIENT_REDIRECT_URL', 'http://localhost/UnaLicWebLab1/index.php/result'); // Redirection path
+
+define('GITHUB_APP_CLIENT_ID', 'f7f733691d60605793e1'); // client ID
+define('GITHUB_APP_CLIENT_SECRET', 'bfe823ba07afa3b7cc9fae76b05a76de0e023022'); // Secret key
+define('GITHUB_APP_CLIENT_REDIRECT_URL', 'http://localhost/UnaLicWebLab1/index.php/resultgithub'); // Redirection path
+define('GITHUB_APP_OAUTH_NAME', 'UnaLicWebLab1'); // Redirection path

@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </h5>
             </nav>
             <nav class="my-2 my-md-0 mr-md-3 d-sm-none d-md-block">
-                <a class="p-2 text-dark" href="#"><img src="<?php echo $this->session->userdata('image');?>" class="rounded" alt="User image"></a>
+                <a class="p-2 text-dark" href="#"><img src="<?php echo $this->session->userdata('image');?>" class="rounded profileimg" alt="User image"></a>
                 <a class="p-2 text-dark" href="#"><?php echo $this->session->userdata('name');?></a>
             </nav>
             <a class="btn btn-outline-primary" href="<?php echo base_url();?>index.php/Logout">Logout</a>
